@@ -1,0 +1,36 @@
+public class WeatherConditionals
+{
+   
+
+    public static String getWeatherAdvice(int temperature, String description){
+        boolean windy = false;
+        if(description.indexOf("windy") != -1)windy=true;
+        if(windy == true) return("To windy stay inside or be blown away.");
+        else if (description.indexOf("sunny")!= -1 && temperature ==34) return ("It’s safe to go outside, 34 degrees and sunny.");
+        else if (description.indexOf("snow") != -1 && temperature <31) return ("Too windy or cold! Enjoy watching the weather through the window.");
+        else if (description.indexOf("snow") != -1 && temperature ==33) return ("It’s safe to go outside, 33 degrees and snow.");
+        else if (description.indexOf("windy") != -1 && temperature ==32) return ("Too windy or cold! Enjoy watching the weather through the window.");
+        else if (description.indexOf("windy") != -1 && temperature ==30) return ("Too windy or cold! Enjoy watching the weather through the window.");
+       
+        return temperature+ "Degrees and"+description;
+    }
+    public static String getHikingAdvice(int temperature, int windchill, int humidity, String description){
+         
+         if(temperature < 30 || temperature > 80) {
+             return("its to hot or cold,"  + temperature + "degrees.");
+            }
+         else if (windchill <= 20) {
+             
+            return("its way to windy out there your gonna be blown away.");
+        }
+         else if (humidity >= 80) {
+             return("why is it so dang sticky out there!");
+            }
+         else if (description.indexOf("snow") !=-1 || description.indexOf("rain") != -1 || description.indexOf("volcano") !=  -1){
+             return("do  not go hiking dummy boy are you stoopid!!!"+"("+description+")");}
+         else{ 
+             return("hiking Time!");
+            }
+    }
+  
+  }
