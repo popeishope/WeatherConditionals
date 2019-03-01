@@ -1,0 +1,49 @@
+
+public class StringTester
+{
+ 
+    
+      public static String weatherCondition = "tsunami";
+      public static String description = "Dangerous large waves";
+      public static int tempature = 76;
+      
+      public static void main()
+      {
+       System.out.println(weatherCondition.length());
+       System.out.println(weatherCondition.substring(0, weatherCondition.indexOf("")));
+        
+       String weatherCondition1 = new String("blizzard");
+       String weatherCondition2 = new String("flash flood");
+        
+        
+       boolean result1 = (weatherCondition1 == weatherCondition2);
+       boolean result2 = (weatherCondition2.equals(weatherCondition2));
+        
+        
+        System.out.println(result1);
+        System.out.println(result2);
+        
+        String currentCondition = new String("Tornados");
+        System.out.println(currentCondition.equals("Tornados"));
+        
+        System.out.println(WeatherConditionals.getWeatherAdvice(0,"tornado"));
+        System.out.println(WeatherConditionals.getWeatherAdvice(5,"mixed rain and snow"));
+        System.out.println(WeatherConditionals.getWeatherAdvice(41,"heavysnow"));
+        System.out.println(WeatherConditionals.getWeatherAdvice(40,"scattered showers"));
+        System.out.println(WeatherConditionals.getWeatherAdvice(32,"sunny"));
+        System.out.println(WeatherConditionals.getWeatherAdvice(24,"windy"));
+        
+        System.out.println(WeatherConditionals.getHikingAdvice(100,0,0, "Sunny"));
+        System.out.println(WeatherConditionals.getHikingAdvice(32,0,0, "Snow"));
+        System.out.println(WeatherConditionals.getHikingAdvice(50,10,0, "Sunny"));
+        System.out.println(WeatherConditionals.getHikingAdvice(50,0,5, "Slick"));
+        System.out.println(WeatherConditionals.getHikingAdvice(50,0,0, "Storm"));
+        } 
+      
+      
+
+
+    
+        
+        
+    }
